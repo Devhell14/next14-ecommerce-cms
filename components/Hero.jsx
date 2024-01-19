@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 const Hero = () => {
   return (
     <section className="py-48 md:py-0 md:h-[820px] relative overflow-hidden bg-primary/5">

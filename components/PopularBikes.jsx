@@ -22,6 +22,9 @@ const getData = async () => {
   return data;
 };
 
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 const PopularBikes = async () => {
   const bikes = await getData();
   // console.log(bikes);

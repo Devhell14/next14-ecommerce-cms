@@ -29,6 +29,9 @@ const getData = async (slug) => {
   return data;
 };
 
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 const ProductDetails = async ({ params }) => {
   const bike = await getData(params.slug);
   console.log(bike);
